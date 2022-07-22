@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.DECIMAL(11, 8),
       },
       remarks: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING,
       },
       isAlert: {

@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DECIMAL(11, 8),
       },
       remarks: {
-        allowNull: false,
+        allowNull: true,
         type: DataTypes.STRING,
       },
       isAlert: {
