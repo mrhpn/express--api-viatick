@@ -4,7 +4,8 @@ const app = express();
 
 app.use(express.json());
 
+require('./startup/cors')(app);
 require('./startup/router')(app);
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 9000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
