@@ -13,13 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       Pin.belongsTo(models.Department, {
         foreignKey: 'departmentId',
         as: 'department',
-        targetKey: 'departmentId',
       });
 
       Pin.belongsTo(models.Group, {
         foreignKey: 'groupId',
         as: 'group',
-        targetKey: 'groupId',
       });
     }
   }
@@ -59,6 +57,28 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         type: DataTypes.STRING,
       },
+      departmentId: {
+        allowNull: true,
+        field: 'department_id',
+        onDelete: 'NO ACTION',
+        onUpdate: 'CASCADE',
+        references: {
+          model: 'departments',
+          key: 'department_id',
+        },
+        type: DataTypes.INTEGER,
+      },
+      groupId: {
+        allowNull: true,
+        field: 'group_id',
+        onDelete: 'NO ACTION',
+        onUpdate: 'CASCADE',
+        references: {
+          model: 'groups',
+          key: 'group_id',
+        },
+        type: DataTypes.INTEGER,
+      },
       createdAt: {
         allowNull: false,
         field: 'created_at',
@@ -72,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: 'pin',
+      modelName: 'Pin',
       tableName: 'pins',
     }
   );

@@ -37,7 +37,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       departmentId: {
-        allowNull: false,
+        allowNull: true,
         field: 'department_id',
         onDelete: 'NO ACTION',
         onUpdate: 'CASCADE',
@@ -48,7 +48,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       groupId: {
-        allowNull: false,
+        allowNull: true,
         field: 'group_id',
         onDelete: 'NO ACTION',
         onUpdate: 'CASCADE',
