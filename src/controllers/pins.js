@@ -32,10 +32,7 @@ exports.getAll = async (req, res) => {
 
   return res.status(200).json({
     status: 'success',
-    data: {
-      count: pins.length,
-      pins,
-    },
+    pins,
   });
 };
 
@@ -66,7 +63,7 @@ exports.getOne = async (req, res) => {
 
   return res.status(200).json({
     status: 'success',
-    data: { pin },
+    pin,
   });
 };
 
@@ -77,8 +74,6 @@ exports.getRedPinsCount = async (req, res) => {
 
   return res.status(200).json({
     status: 'success',
-    data: {
-      count: totalCount,
-    },
+    totalCount,
   });
 };
