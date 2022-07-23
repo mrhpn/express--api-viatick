@@ -40,7 +40,7 @@ exports.getAll = async (req, res) => {
 };
 
 exports.getOne = async (req, res) => {
-  const pinId = req.params.pinId;
+  const { pinId } = req.params;
 
   const pin = await models.Pin.findOne({
     where: { pinId },
