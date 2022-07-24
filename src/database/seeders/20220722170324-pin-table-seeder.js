@@ -66,8 +66,8 @@ const pins = initialData.map((d, index) => ({
   remarks: 'this is remark',
   is_alert: _.random(1, 2) === 1 ? true : false,
   image: d.image,
-  department_id: _.random(1, 3),
-  group_id: _.random(1, 3),
+  department_id: _.sample([4, 14, 24]),
+  group_id: _.sample([4, 14, 24]),
   created_at: new Date(),
   updated_at: new Date(),
 }));
