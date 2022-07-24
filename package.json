@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "sequelize db:migrate",
+    "unseed": "sequelize db:seed:undo:all",
+    "seed": "sequelize db:seed:all",
     "start": "nodemon src/index.js"
   },
   "author": "Htet Phyo Naing",
@@ -15,10 +18,10 @@
     "express": "^4.18.1",
     "lodash": "^4.17.21",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.3"
+    "sequelize": "^6.21.3",
+    "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19",
-    "sequelize-cli": "^6.4.1"
+    "nodemon": "^2.0.19"
   }
 }
