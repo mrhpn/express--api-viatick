@@ -11,7 +11,8 @@
     "migrate": "sequelize db:migrate",
     "unseed": "sequelize db:seed:undo:all",
     "seed": "sequelize db:seed:all",
-    "start": "nodemon src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "author": "Htet Phyo Naing",
   "license": "ISC",
