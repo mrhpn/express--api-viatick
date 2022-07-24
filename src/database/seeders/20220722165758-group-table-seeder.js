@@ -15,7 +15,7 @@ module.exports = {
     await queryInterface.bulkInsert('groups', groups);
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.bulkDelete('groups', null);
   },
 };
